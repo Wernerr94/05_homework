@@ -16,20 +16,21 @@ export default function Home() {
     <div className={css.container}>
       <h1>Trends</h1>
       <ul className={css.movieList}>
-        {trends.map(movie => (
-          <li className={css.movieList__item} key={movie.id}>
-            <Link
-              to={`/movies/${movie.id}`}
-              state={{ from: '/' }}
-              className={css.link}
-            >
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                alt={movie.title}
-              />
-            </Link>
-          </li>
-        ))}
+        {trends &&
+          trends.map(movie => (
+            <li className={css.movieList__item} key={movie.id}>
+              <Link
+                to={`/movies/${movie.id}`}
+                state={{ from: '/' }}
+                className={css.link}
+              >
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                  alt={movie.title}
+                />
+              </Link>
+            </li>
+          ))}
       </ul>
     </div>
   );
