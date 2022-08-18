@@ -1,0 +1,31 @@
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 16px;
+}
+
+.movieList {
+ display: flex;
+ gap: 16px;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.movieList__item {
+  text-align: center;
+  width: 290px;
+}
+
+.link > img {
+  width: 290px;
+  height: auto;
+}
+
+.movieList__item:hover {
+  transform: scale(1.05);
+}

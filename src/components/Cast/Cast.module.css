@@ -1,0 +1,9 @@
+.castList{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 20px;
+}
+.castListCard{
+    width: 240px;
+}
