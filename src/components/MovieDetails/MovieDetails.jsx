@@ -7,6 +7,7 @@ export default function MovieDetails() {
   const [movie, setMovie] = useState([]);
   const { movieId } = useParams();
   const location = useLocation();
+  const backLink = location.state?.from ?? '/movies';
 
   useEffect(() => {
     if (movieId) {
@@ -15,7 +16,7 @@ export default function MovieDetails() {
   }, [movieId]);
   return (
     <div>
-      <Link to={location.state.from}>
+      <Link to={backLink}>
         <button type="button" className={css.goBackButton}>
           Go Back
         </button>
