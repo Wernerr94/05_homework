@@ -17,15 +17,16 @@ export default function Cast() {
         {movieCast &&
           movieCast.map(actor => (
             <li key={actor.id} className={css.castListCard}>
-              {actor.profile_path ? (
-                <img
-                  src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`}
-                  alt={actor.name}
-                  width={100}
-                />
-              ) : (
-                <img src="http://dummyimage.com/100x150" alt="Character" />
-              )}
+              <img
+                src={
+                  actor.profile_path
+                    ? `https://image.tmdb.org/t/p/w500/${actor.profile_path}`
+                    : 'http://dummyimage.com/100x150'
+                }
+                alt={actor.name}
+                width={100}
+              />
+
               <h4>{actor.name}</h4>
               <p>Charecter : {actor.character}</p>
             </li>

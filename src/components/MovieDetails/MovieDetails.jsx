@@ -48,12 +48,12 @@ export default function MovieDetails() {
         <p>Additional information</p>
         <ul>
           <li className={css.addInfoLinks}>
-            <Link to="cast" state={{ from: location.state.from }}>
+            <Link to="cast" state={{ from: location.state?.from }}>
               Cast
             </Link>
           </li>
           <li className={css.addInfoLinks}>
-            <Link to="review" state={{ from: location.state.from }}>
+            <Link to="review" state={{ from: location.state?.from }}>
               Review
             </Link>
           </li>
