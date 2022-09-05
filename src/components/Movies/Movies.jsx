@@ -41,16 +41,15 @@ export default function Movies() {
               to={`/movies/${mov.id}`}
               state={{ from: `/movies?${searchParams}` }}
             >
-              {mov.poster_path ? (
-                <img
-                  className={css.resultList__itemImage}
-                  src={`https://image.tmdb.org/t/p/w500/${mov.poster_path}`}
-                  alt={mov.title}
-                />
-              ) : (
-                <img src={'http://dummyimage.com/240x360'} alt={mov.title} />
-              )}
-
+              <img
+                className={css.resultList__itemImage}
+                src={
+                  mov.poster_path
+                    ? `https://image.tmdb.org/t/p/w500/${mov.poster_path}`
+                    : 'http://dummyimage.com/240x360'
+                }
+                alt={mov.title}
+              />
               <h4>
                 {mov.title}({mov.release_date?.split('-')[0]})
               </h4>
